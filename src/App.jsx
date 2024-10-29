@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react'
 import { Routes, Route} from 'react-router-dom'
 
 import './App.css'
+import Blogs from './Pages/Blogs/Blogs.jsx'
 import HomePage from './Pages/HomePage.jsx'
 import NavBar from './Layout/Navbar/Navbar.jsx'
+import Footer from './Layout/Footer/Footer.jsx'
 
 function App() {
   // tailwinds presets to small screens but for medium screens use md: and for large lg:
@@ -26,7 +28,10 @@ function App() {
 
       <Routes>
         <Route path='/' element={<HomePage />} />
+        <Route path='/blogs' element={<Blogs />} />
       </Routes>
+
+      <Footer />
 
     </main>
     
