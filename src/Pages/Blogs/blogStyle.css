@@ -13,9 +13,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  body {
-    background-color: #ddff64;
-  }
+ 
   
   form {
     display: flex;
