@@ -11,6 +11,7 @@ import { AnimeInfo } from './Components/SearchPage/Animeinfo.jsx'
 import { AnimeList } from './Components/SearchPage/AnimeList.jsx'
 import TopPage from './Pages/TopPage.jsx'
 import SearchPage from './Components/SearchPage/Search.jsx'
+import Content from './Components/Content.jsx'
 
 function App() {
 
@@ -68,7 +69,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/blogs' element={<BlogPage blogs={blogs} setBlogs={setBlogs} />} />
-        {/* <Route path='/blogs/:id' element={<Content blogs={blogs} setBlogs={SetBlogs} /> } /> */}
+        <Route path='/blogs/:id' element={<Content blogs={blogs} setBlogs={setBlogs} />} />
         <Route path='/search' element={<SearchPage />} />
         <Route path='/top' element={<TopPage />}/>
         

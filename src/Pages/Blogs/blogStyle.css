@@ -12,18 +12,26 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  body {
+    background-color: #ddff64;
+  }
   
   form {
     display: flex;
+    
+    background-color: #ddff64;
+    flex-flow: column;
     flex-direction: column;
+    
   }
   
   form label {
-    margin-top: 2em;
+    margin-top: 3em;
   }
   
   a {
-    font-weight: 500;
+    font-weight: 200;
     color: #6471ff;
     text-decoration: inherit;
   }
@@ -35,7 +43,7 @@
     margin: 0;
     display: flex;
     /* place-items: center; */
-    min-width: 320px;
+    min-width: 350px;
     min-height: 100vh;
   }
   

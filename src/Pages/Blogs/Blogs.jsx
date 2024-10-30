@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from "react"
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
-import './blogStyle.css'
-
 import Content from "../../Components/Content.jsx"
 import axios from "axios"
+import './blogStyle.css'
 // // Blog Page rendering ...ie connecting back and front end visually
 
 
