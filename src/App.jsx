@@ -7,8 +7,32 @@ import BlogPage from './Pages/Blogs/Blogs.jsx'
 import HomePage from './Pages/HomePage.jsx'
 import NavBar from './Layout/Navbar/Navbar.jsx'
 import Footer from './Layout/Footer/Footer.jsx'
+import { AnimeInfo } from './Components/SearchPage/Animeinfo.jsx'
+import { AnimeList } from './Components/SearchPage/AnimeList.jsx'
+import TopPage from './Pages/TopPage.jsx'
+import SearchPage from './Components/SearchPage/Search.jsx'
 
 function App() {
+
+  // moved all files related to Search engine to own folded
+// Usestate variables for Search engine will be empty string so the search engineis blank on render
+// const [search, setSearch] = useState("")
+// const [animeData, SetAnimeData] = useState()
+// const [animeInfo, setAnimeInfo] = useState();
+
+
+// fetching Anime data for search page
+// const fetchAnimeData = async() => {
+//   const res = await fetch('https://api.jikan.moe/v4/anime?q=${search}&limit=10')
+//   const resData = await res.json();
+//   // console.log(resData);  === there for testing now adding teh useSTate variables with it
+//   SetAnimeData(resData.data)
+// }
+// useEffect(() => {
+//   fetchAnimeData()
+// }, [search])
+
+// useState for teh blogs
   const [blogs, setBlogs] = useState(null);
   
   // fetch all blogs when component first renders
@@ -44,6 +68,9 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/blogs' element={<BlogPage blogs={blogs} setBlogs={setBlogs} />} />
+        {/* <Route path='/blogs/:id' element={<Content blogs={blogs} setBlogs={SetBlogs} /> } /> */}
+        <Route path='/search' element={<SearchPage />} />
+        <Route path='/top' element={<TopPage />}/>
         
       </Routes>
 

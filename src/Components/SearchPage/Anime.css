@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  header{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  
+    h1 {
+      color: chocolate;
+      font-size: 47px;
+      font-weight: 400;
+      text-align: center;
+  
+      strong {
+        color: purple;
+      }
+    }
+  }
+  
+  h3 {
+    color: darkgreen;
+    font-size: 29px;
+    font-weight: 300;
+    margin-bottom: 18px;
+      strong {
+        color: crimson;
+      }
+  }
+  
+  .content-warp {
+    display: flex;
+  
+        aside {
+          flex: 1 1 250px;
+          max-width: 250px;
+          padding-right: 16px;
+  
+            nav {
+              padding-left: 16px;
+              padding-right: 16px;
+  
+                a {
+                  display: block;
+                  padding: 9px 18px;
+                  text-align: left;
+                  color: dimgray;
+                  font-size: 18px;
+                  margin-bottom: 18px;
+                  background-color: antiquewhite;
+                  border-radius: 999px;
+                  text-decoration: none;
+                  transition: 0.4s;
+  
+                  &:hover {
+                    background-color: crimson;
+                    color: lemonchiffon;
+                  }
+                }
+            }
+        }
+  }
+  
+  main {
+    flex: 1 1 0%;
+    padding: 0px 16px;
+  
+        .main-head {
+          display: flex;
+          justify-content: flex-end;
+  
+          .search-box {
+            display: flex;
+            justify-content: flex-end;
+            flex: 1 1 0%;
+            
+            &:hover {
+              background-color: darkred;
+              
+            }
+  
+  
+            input {
+              appearance: none;
+              background: none;
+              outline: none;
+              border: none;
+              display: block;
+              width: 100%;
+              max-width: 100%;
+              padding: 16px;
+              border-radius: 999px;
+              background-color: beige;
+              transition: 0.4s;
+              
+              &:hover {
+                    background-color: steelblue;
+              }
+  
+                ::placeholder {
+                  color: royalblue;
+                }
+              
+            }
+          }
+        }
+  }
