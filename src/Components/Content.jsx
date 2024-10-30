@@ -5,13 +5,7 @@ import axios from "axios";
 // The content of the Blog posts here to be sent to the Blog file for rendering
 
 export default function Content() {
-    const [Blog, setBlogs] = useState([])
-    const [Loading, setLoading] = useState(false)
-// fetching blogs from backend database with axios and localhost link
-    useEffect(()=>{
-        setLoading(true)
-        axios.get('http://localhost:3737/Blogs')
-    },[])
+ 
     return (
         <> 
         <div>
