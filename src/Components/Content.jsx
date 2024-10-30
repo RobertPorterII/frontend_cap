@@ -46,28 +46,35 @@ export default function Content({blogs, setBlogs}) {
 
     }
 
+
+    // So the Delete code was right but it was not working because i was missing the forward slash after blogs.. so the 500 error in log was showing (blogs66t42386329) but that path does not exist
     // Delete Method  on frontend
     const handleDelete = async() => {
-        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blogs${params.id}`, {
-            method:'DELETE',
-        });
-        console.log(res);
-        
-        if (res.ok) {
-            setBlogs(prevBlog => prevBlog.filter(b =>
-                b._id !== params.id))
-                navigate('/blogs');
+        if(window.confirm("Your Voice Metters... you sure you want your Take gone")){
+
+            const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blogs/${params.id}`, {
+                method: "DELETE",
+            });
+            console.log(res);
+            
+            if (res.ok) {
+                setBlogs((prevBlog) => 
+                    prevBlog.filter((b) =>
+                        b._id !== params.id),
+            );
+            navigate('/blogs');
         }
         
+    }
     };
     const handleChange = (e) => {
         setUpdateFormData({
            ...updateFormData,
-           [e.target.name]: e.target.value 
-        })
-    }
+           [e.target.name]: e.target.value, 
+        });
+    };
 
-    // the Put Method on frontend
+    // the Put Method on frontend to update the a Blog by its id
 
     const handleSubmit = async(e) => {
         try {

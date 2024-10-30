@@ -97,7 +97,7 @@ export default function BlogPage({blogs, setBlogs}) {
     return (
         // form for teh blogs and its input fields
         <>
-            <h1>Blogs HopeFully</h1>
+            <h1>Blogs From the People by the People</h1>
             <div>
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="title">
@@ -134,7 +134,7 @@ export default function BlogPage({blogs, setBlogs}) {
                         onChange={handleChange}/>
                     </label>
                     
-                    <input type="submit" value="Create New Blog" />
+                    <input className="bg-yellow-700 hover:cursor-crosshair" type="submit" value="Create New Blog" />
 
                 </form>
             </div>
