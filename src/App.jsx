@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route} from 'react-router-dom'
 
+
 import './App.css'
 import Blogs from './Pages/Blogs/Blogs.jsx'
 import BlogPage from './Pages/Blogs/Blogs.jsx'
@@ -14,6 +15,8 @@ import SearchPage from './Components/SearchPage/Search.jsx'
 import Content from './Components/Content.jsx'
 
 function App() {
+  
+    
 
   // moved all files related to Search engine to own folded
 // Usestate variables for Search engine will be empty string so the search engineis blank on render
@@ -51,6 +54,7 @@ function App() {
   // tailwinds presets to small screens but for medium screens use md: and for large lg:
   return (
     <>
+    
     <main className='bg-white h-screen'>
 
       {/* <h1 className='text-3xl text-white p-7 font-sans'>CapStone Project</h1>
@@ -74,7 +78,7 @@ function App() {
         <Route path='/top' element={<TopPage />}/>
         
       </Routes>
-
+        
       <Footer />
 
     </main>

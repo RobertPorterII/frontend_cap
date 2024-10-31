@@ -126,7 +126,7 @@ export default function BlogPage({blogs, setBlogs}) {
                         onChange={handleChange}/>
                     </label>
                     <label htmlFor="description">
-                        Description:
+                        Blog Post:
                         <input
                         type="text"
                         name="description"
@@ -142,10 +142,10 @@ export default function BlogPage({blogs, setBlogs}) {
         <div>
             {blogs && blogs.map((blog) => (
                 <Link key={blog._id} to={`/blogs/${blog._id}`}>
-                    <h2>{blog.title}</h2>
-                    <p>{blog.imgUrl}</p>
-                    <p>{blog.intro}</p>
-                    <p>{blog.description}</p>
+                    <h3>Title: {blog.title}</h3>
+                    <p>Image: {blog.imgUrl}</p>
+                    <p>Intro: {blog.intro}</p>
+                    <p>Blog Post: {blog.description}</p>
                     
                 </Link>
             ))}
