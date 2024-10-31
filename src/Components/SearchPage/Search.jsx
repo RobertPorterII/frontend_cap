@@ -47,7 +47,7 @@ const fetchAnimeData = async() => {
               </div>
               {/* <AnimeInfo />  explaining the Search engine and how it works*/}
               <div className="anime-row">
-                <p className="text-heading p-2 m-2 flex items-center ">Our search engine begins as soon as you start  typing, just scroll on down and look thru our findings once u found the Anime you want; give a quick click and scrolled back to the top for more details on it. When your done just hit Enter in search Box to refresh page and Search for something new</p>
+                <p className="text-heading p-2 m-2 flex items-center ">The search engine begins as soon as you start typing, just scroll on down and look thru the findings once u found the Anime you want; give a quick click and scrolled back to the top for more in-depth details on it. When your done just hit Enter in search Box to refresh page and Search for something new</p>
                 <div className="row">
                     <AnimeList 
                     animelist={animeData}

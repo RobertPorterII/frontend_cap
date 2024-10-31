@@ -25,7 +25,7 @@ export default function Footer() {
         <hr/>
         <a href="https://github.com/RobertPorterII"target="_blank" rel="noopener noreferrer" className="icon p-2 m-2 text-rose-800"><FiGithub />Codes</a>
 
-        <h3 className="flex justify-between 20p font-bold text-fuchsia-950"> &copy; Beta Version: All rights reserved  </h3>
+        <h3 className="flex justify-between 20p font-bold text-fuchsia-950"> &copy; Beta Version: Follow for Future Updates  </h3>
         
         <a href="https://www.linkedin.com/in/robert-porter-ii-3a6ab2320" target="_blank" rel="noopener noreferrer" className="icon p-2 m-2 text-rose-800"><FiLinkedin /> Connect with Me!</a>
 
