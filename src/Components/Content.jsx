@@ -50,7 +50,7 @@ export default function Content({blogs, setBlogs}) {
     // So the Delete code was right but it was not working because i was missing the forward slash after blogs.. so the 500 error in log was showing (blogs66t42386329) but that path does not exist
     // Delete Method  on frontend
     const handleDelete = async() => {
-        if(window.confirm("Your Voice Metters... you sure you want your Take gone")){
+        if(window.confirm("Your Voice Matters... you sure you want your Take gone")){
 
             const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blogs/${params.id}`, {
                 method: "DELETE",
@@ -68,45 +68,50 @@ export default function Content({blogs, setBlogs}) {
     }
     };
     const handleChange = (e) => {
+        
         setUpdateFormData({
            ...updateFormData,
            [e.target.name]: e.target.value, 
         });
     };
 
-    // the Put Method on frontend to update the a Blog by its id
+    // the Put Method on frontend to update the a Blog by its id with a warning msg
 
     const handleSubmit = async(e) => {
-        try {
-            e.preventDefault();
-            const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blogs/${params.id}`, {
-                headers : {
-                    'Content-Type': "application/json"
-                },
-                method: 'PUT',
-                body: JSON.stringify(updateFormData)
-            });
-            // SHould receive the updated Blog
-            const data = await res.json();
-            console.log(data);
-            // updated the current Blog State
-            setBlog(data.updatedBlog);
+        if(window.confirm("Change can be a good thing...but sometimes its best to leave well enough alone.SO you Sure u wanna do this")) {
 
-            // updating the project array
-            const updatedBlogs = blogs.map((b) => {
-                if (b._id === params.id) {
-                    return data.updatedBlog
-                } else {
-                    return b;
-                }
-            });
-            console.log(updatedBlogs);
-            setBlogs(updatedBlogs);
-            
-            
-            
-        } catch (error) {
-            console.error(error);
+            try {
+                e.preventDefault();
+                const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blogs/${params.id}`, {
+                    headers : {
+                        'Content-Type': "application/json"
+                    },
+                    method: 'PUT',
+                    body: JSON.stringify(updateFormData)
+                });
+                // SHould receive the updated Blog
+                const data = await res.json();
+                console.log(data);
+                // updated the current Blog State
+                setBlog(data.updatedBlog);
+                
+                // updating the project array
+                const updatedBlogs = blogs.map((b) => {
+                    if (b._id === params.id) {
+                        return data.updatedBlog
+                    } else {
+                        return b;
+                    }
+                });
+                console.log(updatedBlogs);
+                setBlogs(updatedBlogs);
+                
+                
+                
+            } catch (error) {
+                console.error(error);
+                
+            }
             
         }
     }
