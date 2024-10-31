@@ -17,15 +17,17 @@ import { FiGithub, FiLinkedin } from "react-icons/fi"
 export default function Footer() {
     
     return (
-        
+        // for the line break use flex-grow to span the entire screen and border-t-8 to thicken the line up
         <>
         
-
+        <hr className="flex-grow border-t-8 border-emerald-800"/>
         <footer className="flex w-full flex-row flex-wrap items-center justify-center">
-        <hr />
+        <hr/>
+        <a href="https://github.com/RobertPorterII"target="_blank" rel="noopener noreferrer" className="icon p-2 m-2 text-rose-800"><FiGithub />Codes</a>
+
         <h3 className="flex justify-between 20p font-bold text-fuchsia-950"> &copy; Beta Version: All rights reserved  </h3>
         
-        <a href="https://www.linkedin.com/in/robert-porter-ii-3a6ab2320" target="_blank" rel="noopener noreferrer" className="icon p-2 m-2"><FiLinkedin /> Connect with Me!</a>
+        <a href="https://www.linkedin.com/in/robert-porter-ii-3a6ab2320" target="_blank" rel="noopener noreferrer" className="icon p-2 m-2 text-rose-800"><FiLinkedin /> Connect with Me!</a>
 
         </footer>
         
